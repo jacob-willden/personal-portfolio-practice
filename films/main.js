@@ -7,5 +7,7 @@ function getIdFromUrl(url) {
 
 for(let i = 0; i < films.length; i++) {
     const foundFilm = films.find(film => getIdFromUrl(film.url) === (i + 1));
-    console.log(foundFilm);
+    const myElement = document.createElement('p');
+    myElement.textContent = foundFilm;
+    document.querySelector('body').appendChild(myElement);
 }
