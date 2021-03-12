@@ -12,7 +12,15 @@ function getIdFromUrl(url) {
 
 for(let i = 0; i < species.length; i++) {
     const foundCreature = species.find(creature => getIdFromUrl(creature.url) === (i + 1));
-    const myElement = document.createElement('p');
-    myElement.textContent = foundCreature.name;
-    document.querySelector('body').appendChild(myElement);
+
+    let myFigure = document.createElement('figure');
+    let myImg = document.createElement('img');
+    let myCaption = document.createElement('figcaption');
+
+    myImg.src = `https://starwars-visualguide.com/assets/img/species/${i + 1}.jpg`;
+    myCaption.textContent = foundCreature.name;
+
+    myFigure.appendChild(myImg);
+    myFigure.appendChild(myCaption);
+    document.querySelector('.species-list').appendChild(myFigure);
 }
