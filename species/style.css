@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.species-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.species-list figcaption {
+    
+}
